@@ -2061,7 +2061,9 @@
                   _vm.currentColor +
                   "; fill: " +
                   _vm.currentColor +
-                  ";",
+                  "; background-color: " +
+                  _vm.currentColor +
+                  "; border: 2px solid #555;",
                 attrs: { type: "button" },
                 on: { click: _vm.toggleMenu }
               },

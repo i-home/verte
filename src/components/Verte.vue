@@ -4,7 +4,7 @@
     ref="guide"
     type="button"
     v-if="!menuOnly"
-    :style="`color: ${currentColor}; fill: ${currentColor};`"
+    :style="`color: ${currentColor}; fill: ${currentColor}; background-color: ${currentColor}; border: 2px solid #555;`"
     @click="toggleMenu"
     )
     slot
