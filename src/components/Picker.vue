@@ -105,7 +105,8 @@ export default {
     },
     // this function calls when the color changed from outside the picker
     handleValue(color, muted = false) {
-      const { width, height } = this.pickerRect;
+      const width = this.$refs.canvas.width;
+      const height = this.$refs.canvas.height;
       this.currentColor = toHsl(color);
       // prvent upadtion picker slider for causing
       // echo udationg to the current color value
@@ -158,7 +159,8 @@ export default {
     },
     updateWheelColors() {
       if (!this.circle) return;
-      const { width, height } = this.pickerRect;
+      const width = this.$refs.canvas.width;
+      const height = this.$refs.canvas.height;
 
       const x = this.circle.xCords;
       const y = this.circle.yCords;
@@ -222,7 +224,8 @@ export default {
       }
 
       if (this.mode === "square") {
-        const { width, height } = this.pickerRect;
+        const width = this.$refs.canvas.width;
+        const height = this.$refs.canvas.height;
         sat = (x * 100) / width;
         lum = 100 - (y * 100) / height;
         hue = this.currentHue;
